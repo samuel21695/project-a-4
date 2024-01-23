@@ -28,4 +28,20 @@ const Subscription: React.FC = () => {
     '/subscribe' 로 작성된 경로는 임의으 GET 요청을 받아 처리하는 라우터를 의미하고, 
     다른 REST API처럼 주소의 형태, 걍로의 형태 등 여러가지가 될 수 있다.
   */
+
+  const handleSubscribe = async () => {
+    try {
+      const response = await fetch('/subscribe');
+      if (!response.ok) {
+
+        /*
+        response.ok는 fetch() 메서드가 정상적으로 동작했는지를 확인하는 속성
+        */
+
+        throw new Error('네트워크가 동작하지 않을 때 뜨는 에러');
+      }
+      const data = await response.json();
+      
+    }
+  }
 }
