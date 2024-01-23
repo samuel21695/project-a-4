@@ -41,7 +41,14 @@ const Subscription: React.FC = () => {
         throw new Error('네트워크가 동작하지 않을 때 뜨는 에러');
       }
       const data = await response.json();
-      
+
+      /*
+        if(data.isSubscribed) 라는 조건식은 서버에서 받아온 데이터가 구독 상태인지를 확인하는 조건식으로 여기서 인자로 받은 data는 세션스토리지에서 받아온 데이터이다.
+
+        참(true)로 판단되는, 패턴 truthy하다고 하는 패턴으로
+        "존재한다면 참" 이라느 의미로, data.isSubscribed가 존재한다면 참이다.
+        비교연산자를 사용하지 않은 이유는, data.isSubscribed가 true인지를 확인하기 위함이다.
+      */
     }
   }
 }
