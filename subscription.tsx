@@ -62,6 +62,22 @@ const Subscription: React.FC = () => {
     } catch (error) {
       console.error('Error:', error);
     }
-  }
-  
-}
+  };
+
+  return (
+    <div>
+      <h1>Session Storage Example</h1>
+      <button onClick={handleSubscribe}>구독하기</button>
+      {isSubscribed && <p>현재 구독중입니다.</p>}
+      {/*
+        isSubscribed가 true라면, <p>현재 구독 중입니다.</p>를 렌더링한다.
+        이때, isSubscribed가 false라면, <p>햔재 구독 중입니다.</p>를 렌더링하지 않는다.
+
+        단락 평가 방식으로 && 연산자를 사용하면, isSubscribed가 true일 때만 렌더링된다.
+        이렇게 렌더링되는 것을 조건부 렌더링이라고 한다.
+      */}
+    </div>
+  );
+};
+
+export default Subscription;
