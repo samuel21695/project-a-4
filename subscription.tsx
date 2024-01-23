@@ -49,6 +49,16 @@ const Subscription: React.FC = () => {
         "존재한다면 참" 이라느 의미로, data.isSubscribed가 존재한다면 참이다.
         비교연산자를 사용하지 않은 이유는, data.isSubscribed가 true인지를 확인하기 위함이다.
       */
+
+      if (data.isSubscribed) {
+        // sessionStorage에 'isSubscribed'라는 키로 true를 저장한다.
+        sessionStorage.setItem('isSubscribed', 'true');
+        // 맨 위에서 설정한 상태값도 true로 변경한다.
+        setIsSubscribed(true);
+        console.log('구독 상태가 저장되었습니다!');
+      } else {
+        console.log('구독 상태를 저장하지 못했습니다.');
+      }
     }
   }
 }
