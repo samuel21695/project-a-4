@@ -59,6 +59,9 @@ const Subscription: React.FC = () => {
       } else {
         console.log('구독 상태를 저장하지 못했습니다.');
       }
+    } catch (error) {
+      console.error('Error:', error);
     }
   }
+  
 }
