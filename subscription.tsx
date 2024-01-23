@@ -16,4 +16,11 @@ const Subscription: React.FC = () => {
     useEffect()메서드가 동작되면, 상태가 true로 바뀌고,
     sessionStorage에 'isSubscribed'라는 키로 true가 저장된다.
   */
+
+  useEffect(() => {
+    const subscriptionStatus = sessionStorage.getItem('isSubscribed') === 'true';
+    setIsSubscribed(subscriptionStatus);
+  }, []);
+
+  
 }
