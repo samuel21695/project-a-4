@@ -22,5 +22,10 @@ const Subscription: React.FC = () => {
     setIsSubscribed(subscriptionStatus);
   }, []);
 
-  
+  /*
+    handleSubscribe() 메서드는 fetch() 메서드를 사용하여 서버에 구독 
+    요청을 보낸다. 
+    '/subscribe' 로 작성된 경로는 임의으 GET 요청을 받아 처리하는 라우터를 의미하고, 
+    다른 REST API처럼 주소의 형태, 걍로의 형태 등 여러가지가 될 수 있다.
+  */
 }
